@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+main {
+    flex: 1; /* Makes main content take up remaining space */
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align items at the bottom */
+    align-items: center; /* Center items horizontally */
+    text-align: center;
+    padding: 100px 50px; /* Adjust as needed for spacing */
+    position: relative; /* To contain the absolutely positioned image */
+    height: 70vh; /* Full viewport height for the hero section */
+    background-size: cover;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 0px;
+    color: white;
+}
+
+.hero p {
+    color: white;
+    font-size: 2.2em;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: rgb(37, 211, 102); 
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin: 20px 5px;
+}
+
+.hero img {
+    width: 110%;
+    height: 120%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+footer {
+    background-color:transparent;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    top:30px;
+    left: 0;
+}
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul li {
+    margin: 0 1rem;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+footer nav ul li a:hover {
+    text-decoration: underline;
+}

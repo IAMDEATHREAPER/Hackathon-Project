@@ -1,0 +1,146 @@
+body {
+    background-image: url(1.png);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cdc5c5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.villan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 50px;
+    position: relative;
+    min-height: 70vh;
+    background-size: cover;
+    top: -300px;
+}
+
+.villan h2 {
+    font-size: 2.5em;
+    margin: 0px;
+    position: relative;
+    top: 300px;
+}
+
+.villan p {
+    font-size: 1.2em;
+    margin: 0px;
+    position: relative;
+    top: 300px;
+}
+
+/* Animation to move lines from the bottom to the top of the buttons */
+@keyframes drawBox {
+    0% {
+        height: 0;
+        width: 0;
+    }
+    50% {
+        height: 100%; /* Lines grow vertically */
+        width: 0;
+    }
+    100% {
+        height: 100%;
+        width: 100%; /* Lines meet and complete the box */
+    }
+}
+
+/* Animate the buttons to fade in with the box */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.button-container {
+    position: relative;
+    padding: 20px; /* Reduced padding */
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    top: 200px;
+    background: none; /* Ensure there is no background color */
+    border: none; /* No border for the container */
+    animation: fadeIn 2s ease forwards; /* Buttons appear with the box */
+}
+
+/* Define the lines that form the box with rounded corners */
+.line {
+    position: absolute;
+    height: 0;
+    width: 4px; /* Line thickness */
+    background-color: black; /* Only the line is visible */
+    border-radius: 15px; /* Rounded edges for the lines */
+    animation: drawBox 2s ease forwards; /* Box animation */
+}
+
+.line.left {
+    left: 0;
+    bottom: 0;
+    animation-delay: 0s; /* Start immediately */
+    animation-direction: normal; /* Start from the bottom */
+}
+
+.line.right {
+    right: 0;
+    bottom: 0;
+    animation-delay: 0s;
+    animation-direction: normal;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px; /* Reduced padding inside buttons */
+    font-size: 1.2em;
+    color: white;
+    background-color: rgb(37, 211, 102);
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    position: relative;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 2s ease forwards; /* Buttons fade in as the box is drawn */
+}
+
+.button1 {
+    background-color: gray;
+    border-radius: 80px;
+}
+
+.button1:hover {
+    opacity: 0.5;
+}
+
+.button2 {
+    background-color: gray;
+    border-radius: 150px;
+}
+
+.button2:hover {
+    opacity: 0.5;
+}
+
+.button3 {
+    background-color: gray;
+    border-radius: 200px;
+}
+
+.button3:hover {
+    opacity: 0.5;
+}

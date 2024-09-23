@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <main>
+        <section class="hero">
+            <img src="{% static 'hj.jpg' %}" alt="Person lifting weights in a gym" class="hero-image">
+            <h1>Transform Your Body, Transform Your Life</h1>
+            <p>Get started on your fitness journey today!</p>
+            <a href="selection.html" class="button">Start</a>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="fancycontact.html">Contact</a></li>
+                <li><a href="newabout.html">About</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body> 
+</html>
